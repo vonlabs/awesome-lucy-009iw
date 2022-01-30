@@ -1,6 +1,12 @@
 import React from "react";
-type Args = { [argname: string]: boolean };
-type Operation = any; /* ...todo:
+import ArgumentBuilder from './components/ArgumentBuilder'
+import OperationBuilder from './components/OperationBuilder'
+import { Argument } from './types'
+
+import './styles.css';
+
+
+/* ...todo:
 a system for defining logical operations 
 (not, and, or... more if you want) that can be passed:
  - selected args by name: (X and Y)
@@ -8,23 +14,32 @@ a system for defining logical operations
  - other operations: ((X and Y) or Z) 
  */
 
-function evaluateOperation(operation: Operation, args: Args): boolean {
-  /* ...todo: implement an evaluator for your operations, 
-  given some args */
-}
 
-function OperationBuilder(props: {
-  value: Operation;
-  onChange: (value: Operation) => void;
-}): JSX.Element {
-  /* ...todo: an ugly gui for creating operations */
-}
+/*
+todo: use <OperationBuilder> and have an interface
+for entering arguments and seeing the result
+*/
 
 export default function App() {
+  const [args, setArguments] = React.useState<Argument[]>([]);
+
+  function onChangeArg (value: Argument[]): void {
+    setArguments(value);
+  }
+
   return (
-    <div>
-      {/* todo: use <OperationBuilder> and have an interface
-      for entering arguments and seeing the result */}
+    <div 
+      className="app-container"
+    >
+      <ArgumentBuilder 
+        value={args} 
+        onChange={onChangeArg}
+      />
+      <OperationBuilder 
+        arguments={args.filter(function(arg){ 
+          return arg.name !== '';
+        })} 
+      />
     </div>
   );
 }

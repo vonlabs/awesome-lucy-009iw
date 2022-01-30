@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+.app-container {
+    margin: 16px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.argument-builder {
+    margin-bottom: 64px;
+}
+
+.operation-builder {
+    margin-bottom: 32px;
+}
+
+.main-input {
+    width: 210px;
+}
+
+.type-input {
+    width: 150px;
+}
+
+.operator-choice {
+    width: 120px;
+}
+
+.not-operator.MuiFormControlLabel-root {
+    position: relative;
+    height: 54px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.not-operator.MuiFormControlLabel-root > .MuiTypography-root{
+    color: rgba(0, 0, 0, 0.6);
+    background: #f7f7f7;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    display: block;
+    transform-origin: top left;
+    overflow: hidden;
+    position: absolute;
+    left: -4px;
+    top: 0;
+    padding: 0;
+    padding-right: 6px;
+    padding-left: 6px;
+    -webkit-transform: translate(14px, -9px) scale(0.75);
+    -moz-transform: translate(14px, -9px) scale(0.75);
+    -ms-transform: translate(14px, -9px) scale(0.75);
+    transform: translate(14px, -9px) scale(0.75);
+    z-index: 1;
+}
+
+.bool-select {
+    width: 100px;
+}
+
+.icon-button {
+    width: 48px;
+    height: 48px;
+}
+
+.indentation {
+    margin-left: 24px;
+}
+
+
+.q1, .q7,
+.q2, .q3, .q5, .q6, .q8, .q9, .q10, .q11,
+.q4 {
+    margin-bottom: 12px;
+}
+
+.q2, .q3, .q5, .q6, .q8, .q9, .q10, .q11 {
+    margin-left: 16px;
+}
+
+.q4 {
+    margin-left: 32px;
+}
+
+
+div.q4:last-child{
+    background-color: red;
+}
